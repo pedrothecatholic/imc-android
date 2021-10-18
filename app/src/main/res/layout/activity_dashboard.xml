@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,9 +17,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
-            android:layout_marginBottom="30dp">
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="120dp"
@@ -31,27 +30,27 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/profile"/>
+                    android:src="@drawable/profile" />
             </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pedro de Sousa"
-                android:gravity="center"
-                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="20sp"
-                android:layout_marginTop="5dp"/>
+                android:gravity="center"
+                android:text="Pedro de Sousa"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aprendiz de Programador de Sistemas"
-                android:gravity="center"
-                android:textColor="@android:color/white"
                 android:fontFamily="@font/montserrat"
-                android:textSize="15sp"/>
+                android:gravity="center"
+                android:text="Aprendiz de Programador de Sistemas"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -73,7 +72,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -83,7 +82,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,7 +99,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -110,7 +109,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <LinearLayout
@@ -127,7 +126,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -137,8 +136,9 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -153,7 +153,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -163,7 +163,7 @@
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <LinearLayout
@@ -201,17 +201,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"
+        android:background="@color/white1"
         android:gravity="center"
-        android:padding="30dp"
-        android:background="@color/white1">
+        android:orientation="vertical"
+        android:padding="30dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
             app:cardBackgroundColor="@color/white2"
-            app:cardCornerRadius="5dp"
-            android:layout_marginBottom="25dp">
+            app:cardCornerRadius="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -221,8 +221,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_marginEnd="10dp"
+                    android:orientation="vertical"
                     android:padding="2dp">
 
                     <ImageView
@@ -236,8 +236,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -248,7 +248,7 @@
                         android:text="Pesar Agora"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -268,9 +268,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
             app:cardBackgroundColor="@color/white2"
-            app:cardCornerRadius="5dp"
-            android:layout_marginBottom="25dp">
+            app:cardCornerRadius="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -280,23 +280,23 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_marginEnd="10dp"
+                    android:orientation="vertical"
                     android:padding="2dp">
 
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/bmi2"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bmi2" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -307,7 +307,7 @@
                         android:text="Ver Histórico"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"

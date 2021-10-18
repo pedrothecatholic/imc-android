@@ -7,9 +7,9 @@
     tools:context=".LoginActivity">
 
     <RelativeLayout
+        android:id="@+id/ll_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ll_header"
         android:background="@color/blueIMC">
 
         <TextView
@@ -18,8 +18,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/paytone_one"
-            android:text="Health\nCalc"
             android:gravity="end"
+            android:text="Health\nCalc"
             android:textColor="@android:color/white"
             android:textSize="30sp" />
 
@@ -33,34 +33,34 @@
     </RelativeLayout>
 
     <View
-        android:background="@drawable/ic_wave_bottom"
         android:id="@+id/wave_top"
-        android:scaleY="-1"
-        android:scaleX="-1"
-        android:scaleType="centerCrop"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_below="@+id/ll_header"/>
+        android:layout_below="@+id/ll_header"
+        android:background="@drawable/ic_wave_bottom"
+        android:scaleType="centerCrop"
+        android:scaleX="-1"
+        android:scaleY="-1" />
 
     <TextView
         android:id="@+id/text_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/wave_top"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:text="Login"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/wave_top"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text_login_continuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Faça login para continuar"
         android:layout_below="@id/text_login"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="25dp"/>
+        android:layout_marginBottom="25dp"
+        android:text="Faça login para continuar" />
 
     <EditText
         android:id="@+id/edit_text_email"
@@ -70,11 +70,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
-        android:hint="E-mail"
         android:background="@drawable/activity_border_blue"
-        android:padding="15dp"
         android:drawableStart="@drawable/ic_letter"
-        android:drawablePadding="8dp"/>
+        android:drawablePadding="8dp"
+        android:hint="E-mail"
+        android:padding="15dp" />
 
     <EditText
         android:id="@+id/edit_text_senha"
@@ -83,25 +83,25 @@
         android:layout_below="@id/edit_text_email"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:hint="Senha"
         android:background="@drawable/activity_border_blue"
-        android:padding="15dp"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="8dp"
-        android:inputType="textPassword"/>
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:padding="15dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_entrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Entrar"
         android:layout_below="@id/edit_text_senha"
-        app:backgroundTint="@null"
+        android:layout_margin="20dp"
         android:background="@drawable/activity_background_blue"
-        android:textColor="@android:color/white"
         android:letterSpacing="0"
-        android:textSize="16sp">
+        android:text="Entrar"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@null">
 
     </com.google.android.material.button.MaterialButton>
 
@@ -109,45 +109,45 @@
         android:id="@+id/check_box_lembrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lembrar-me"
         android:layout_below="@id/button_entrar"
-        android:layout_alignEnd="@id/button_entrar"/>
+        android:layout_alignEnd="@id/button_entrar"
+        android:text="Lembrar-me" />
 
     <TextView
         android:id="@+id/text_view_esqueci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Esqueceu a senha?"
         android:layout_below="@id/check_box_lembrar"
         android:layout_alignEnd="@id/check_box_lembrar"
-        android:clickable="true"
-        android:textStyle="bold"
-        android:textColor="@color/blueIMC"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:text="Esqueceu a senha?"
+        android:textColor="@color/blueIMC"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end"
+        android:layout_below="@+id/text_view_esqueci"
         android:layout_marginEnd="20dp"
-        android:layout_below="@+id/text_view_esqueci">
+        android:gravity="end">
 
         <TextView
             android:id="@+id/text_view_sem_conta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Não tem uma conta?"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:text="Não tem uma conta?" />
 
         <TextView
             android:id="@+id/text_view_criar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crie sua conta agora"
             android:clickable="true"
-            android:textStyle="bold"
-            android:textColor="@color/blueIMC" />
+            android:text="Crie sua conta agora"
+            android:textColor="@color/blueIMC"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -164,12 +164,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
         android:text="Desenvolvido por DS2M"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        />
+        android:textStyle="bold" />
 </RelativeLayout>

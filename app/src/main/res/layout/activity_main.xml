@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/activity_background">
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,83 +27,82 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="IMC"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="30sp"
-                android:fontFamily="sans-serif-black"
                 android:layout_marginTop="-5dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="IMC"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/edit_text_peso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite seu peso..."
-                android:textColorHint="@android:color/white"
-                android:textColor="@android:color/white"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/activity_border"
                 android:drawableStart="@drawable/ic_weight"
                 android:drawablePadding="8dp"
-                android:padding="15dp"
-                android:layout_marginBottom="15dp"
+                android:hint="Digite seu peso..."
                 android:inputType="number"
-                android:maxLength="3"/>
+                android:maxLength="3"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
 
             <EditText
                 android:id="@+id/edit_text_altura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite sua altura..."
-                android:textColorHint="@android:color/white"
-                android:textColor="@android:color/white"
+                android:layout_marginBottom="25dp"
                 android:background="@drawable/activity_border"
                 android:drawableStart="@drawable/ic_body_height"
                 android:drawablePadding="8dp"
-                android:padding="15dp"
-                android:layout_marginBottom="25dp"
+                android:hint="Digite sua altura..."
                 android:inputType="numberDecimal"
-                android:maxLength="4"/>
+                android:maxLength="4"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_calcular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@null"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/activity_border_background"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0"
+                android:padding="7.5dp"
                 android:text="Calcular"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
-                android:padding="7.5dp"
-                android:fontFamily="sans-serif-black"
-                android:layout_marginBottom="30dp"
-                android:letterSpacing="0">
-            </com.google.android.material.button.MaterialButton>
-            
+                app:backgroundTint="@null"></com.google.android.material.button.MaterialButton>
+
 
             <TextView
                 android:id="@+id/text_view_resultado"
                 android:layout_width="145dp"
                 android:layout_height="145dp"
-                android:text="0,0"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:textSize="35sp"
-                android:textStyle="bold"
-                android:padding="20dp"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/activity_background_circle"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="0,0"
                 android:textColor="@color/blueIMC"
-                android:layout_marginBottom="15dp"/>
+                android:textSize="35sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_view_status_peso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:gravity="center"
-                android:textSize="25sp"
                 android:fontFamily="sans-serif-black"
-                android:textColor="@android:color/white"/>
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
 
         </LinearLayout>
 

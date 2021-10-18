@@ -31,7 +31,7 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if (validarCampos()){
+        if (validarCampos()) {
             //Salvar o registro
         }
 
@@ -40,7 +40,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun validarCampos(): Boolean {
-    var valido = true
+        var valido = true
 
         if (editEmail.text.isEmpty()) {
             editEmail.error = "O e-mail é obrigatório!"
