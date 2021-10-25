@@ -7,8 +7,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
+import android.widget.Toast
 import com.example.calculadoraimc.R
 import com.example.calculadoraimc.model.Usuario
+import com.example.calculadoraimc.utils.convertStringToLocalDate
 import java.time.LocalDate
 
 class SignUpActivity : AppCompatActivity() {
@@ -17,8 +19,11 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var editSenha: EditText
     lateinit var editNome: EditText
     lateinit var editAltura: EditText
-    lateinit var editSexo: EditText
+    lateinit var editDataNascimento: EditText
     lateinit var editProfissao: EditText
+    lateinit var editSexo: EditText
+    lateinit var radioF: EditText
+    lateinit var radioM: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +33,8 @@ class SignUpActivity : AppCompatActivity() {
         editSenha = findViewById<EditText>(R.id.edit_text_senha)
         editNome = findViewById<EditText>(R.id.edit_text_nome)
         editAltura = findViewById<EditText>(R.id.edit_text_email)
-        editEmail = findViewById<EditText>(R.id.edit_text_email)
-        editEmail = findViewById<EditText>(R.id.edit_text_email)
+        editDataNascimento = findViewById<EditText>(R.id.edit_text_nascimento)
+        editProfissao = findViewById<EditText>(R.id.edit_text_profissao)
         editEmail = findViewById<EditText>(R.id.edit_text_email)
 
         supportActionBar!!.title = "Novo Usuário"
@@ -47,14 +52,25 @@ class SignUpActivity : AppCompatActivity() {
 
         if (validarCampos()) {
             // Criar o objeto usuario
-            val usuario = Usuario(
+                val nascimento = convertStringToLocalDate(editDataNascimento.text.toString())
+                val usuario = Usuario(
                 1,
                 editNome.text.toString(),
                 editEmail.text.toString(),
                 editSenha.text.toString(),
                 0,
                 editAltura.text.toString().toDouble(),
-                LocalDate.of(1999, 1, 21)
+                LocalDate.of(
+                    nascimento.year,
+                    nascimento.monthValue,
+                    nascimento.dayOfMonth
+                ),
+                editProfissao.text.toString(),
+                    if (radioF.isChecked){
+                        'F'
+                    } else {
+                        'M'
+                    }
 
             )
 
@@ -70,8 +86,20 @@ class SignUpActivity : AppCompatActivity() {
             // Vamos criar o objeto que permitirá a
             // edição dos dados do arquivo SharedPreferences
             val editor = dados.edit()
+            editor.putInt("id", usuario.id)
+            editor.putString("nome", usuario.nome)
+            editor.putString("email", usuario.email)
+            editor.putString("senha", usuario.senha)
+            editor.putInt("peso", usuario.peso)
+            editor.putFloat("altura", usuario.altura.toFloat())
+            editor.putString("dataNascimento", usuario.dataNascimento.toString())
+            editor.putString("profissao", usuario.profissao)
+            editor.putString("sexo", usuario.sexo.toString())
+            editor.apply()
 
         }
+
+        Toast.makeText(this, "Usuário cadastrado!", Toast.LENGTH_SHORT).show()
 
         return true
 

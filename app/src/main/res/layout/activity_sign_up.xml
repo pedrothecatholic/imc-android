@@ -160,6 +160,7 @@
                     android:textSize="18sp" />
 
                 <RadioButton
+                    android:id="@+id/radio_feminino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
@@ -168,6 +169,7 @@
                     android:textSize="18sp" />
 
                 <RadioButton
+                    android:id="@+id/radio_masculino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Masculino"
